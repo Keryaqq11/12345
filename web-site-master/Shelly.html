@@ -1,0 +1,109 @@
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css"> <!-- Подключаем файл стилей -->
+        <title>g3</title>
+
+        <!-- Добавляем стиль для изменения размера картинок -->
+        <style>
+            img {
+                width: 80%; /* Устанавливаем ширину картинок на 80% от контейнера */
+                max-width: 500px; /* Устанавливаем максимальную ширину картинок */
+                height: auto; /* Сохраняем пропорции изображения */
+                display: block; /* Для устранения пробелов ниже изображений */
+                margin-left: 0; /* Размещение по левому краю */
+                margin-top: 20px; /* Отступ сверху */
+            }
+
+            /* Пример для более специфичной настройки для некоторых картинок */
+            .small-image {
+                width: 50%; /* Для определенных картинок задаём меньший размер */
+                max-width: 80px; /* Максимальная ширина для маленьких изображений */
+                margin-left: 0; /* Размещение по левому краю */
+            }
+
+            .medium-image {
+                width: 30%; /* Устанавливаем ширину на 30% для средних изображений */
+                max-width: 200px; /* Максимальная ширина для средних картинок */
+                margin-left: 0; /* Размещение по левому краю */
+            }
+
+            .character-build {
+                display: flex; /* Используем flexbox для размещения на одном уровне */
+                align-items: center; /* Выравнивание по центру по вертикали */
+                gap: 20px; /* Отступы между элементами */
+            }
+
+            .character-build img {
+                width: auto; /* Убираем установленные значения width, чтобы они не перекрывали стиль */
+                max-width: 120px; /* Максимальная ширина для картинки персонажа */
+                height: auto; /* Сохраняем пропорции изображения */
+            }
+
+            /* Устанавливаем отступы для заголовков и изображений */
+            h1 {
+                margin-bottom: 10px;
+            }
+
+            /* Новый стиль для блока с картинками на уровне Шелли */
+            .icons-row {
+                display: flex;
+                justify-content: space-between; /* Размещаем картинки с равными отступами по бокам */
+                gap: 1px; /* Уменьшаем отступы до 10px */
+                margin-top: 1px;
+                margin-bottom: 1px; /* Уменьшили нижний отступ */
+            }
+
+            .icons-row img {
+                max-width: 100px; /* Сделали иконки немного меньше */
+                height: auto; /* Сохраняем пропорции изображения */
+                margin: 0; /* Убираем отступы */
+                padding: 0; /* Убираем лишние отступы */
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <!-- Блок с изображением Шелли -->
+        <div class="character-build">
+            <img src="Shelly.webp" alt="Шелли" class="medium-image">
+            <div>
+                <h1>Шелли</h1>
+                <div class="character-build">
+                    <div>
+                        <h2>Обычный билд</h2>
+                        <img src="1.webp" alt="Контузия" class="small-image">
+                        <img src="gadget1.webp" alt="Стрельба по тарелкам" class="small-image">
+                        <img src="yron.webp" alt="Гирс на урон" class="small-image">
+                        <img src="Dop.webp" alt="Гирс на доп гаджет" class="small-image">
+                    </div>
+                    <div>
+                        <h2>Билд на кустовую карту</h2>
+                        <img src="1.webp" alt="Контузия" class="small-image">
+                        <img src="gadget1.webp" alt="Стрельба по тарелкам" class="small-image">
+                        <img src="speed.webp" alt="Гирс на скорость в кустах" class="small-image">
+                        <img src="Dop.webp" alt="Гирс на доп гаджет" class="small-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Добавляем блок с иконками для Шелли -->
+        <div class="icons-row">
+            <img src="starting.webp" alt="Starting">
+            <img src="Rare.webp" alt="Rare">
+            <img src="superrare.webp" alt="Superrare">
+            <img src="epic.webp" alt="Epic">
+            <img src="mythic.webp" alt="Mythic">
+            <img src="Coin.webp" alt="Legendary">
+        </div>
+
+        <p><a href="index.html">Вернуться на главную</a></p>
+
+    </body>
+    </html>

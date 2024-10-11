@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.img-container {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет изображениями обтекать */
+    gap: 10px; /* Промежуток между изображениями */
+}
+
+.img-container img {
+    width: 100%; /* Задает ширину 100% от родительского элемента */
+    max-width: 300px; /* Ограничивает максимальную ширину изображений */
+    height: auto; /* Сохраняет пропорции изображения */
+    border-radius: 8px; /* Добавляет закругления углов для изображений */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Добавляет тень к изображениям */
+}
