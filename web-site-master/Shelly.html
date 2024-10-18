@@ -10,79 +10,98 @@
 
         <!-- Добавляем стиль для изменения размера картинок -->
         <style>
-            img {
-                width: 80%; /* Устанавливаем ширину картинок на 80% от контейнера */
-                max-width: 500px; /* Устанавливаем максимальную ширину картинок */
-                height: auto; /* Сохраняем пропорции изображения */
-                display: block; /* Для устранения пробелов ниже изображений */
-                margin-left: 0; /* Размещение по левому краю */
-                margin-top: 20px; /* Отступ сверху */
-            }
+        /* Сброс отступов и внутреннего поля */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-            /* Пример для более специфичной настройки для некоторых картинок */
-            .small-image {
-                width: 50%; /* Для определенных картинок задаём меньший размер */
-                max-width: 80px; /* Максимальная ширина для маленьких изображений */
-                margin-left: 0; /* Размещение по левому краю */
-            }
+        /* Общие стили для персонажей */
+        img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            display: inline-block;
+            margin-right: 20px;
+        }
 
-            .medium-image {
-                width: 30%; /* Устанавливаем ширину на 30% для средних изображений */
-                max-width: 200px; /* Максимальная ширина для средних картинок */
-                margin-left: 0; /* Размещение по левому краю */
-            }
+        /* Выравнивание контента влево */
+        .container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
 
-            .character-build {
-                display: flex; /* Используем flexbox для размещения на одном уровне */
-                align-items: center; /* Выравнивание по центру по вертикали */
-                gap: 20px; /* Отступы между элементами */
-            }
+        /* Стили для карточек билдов */
+        .character-build {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            width: 500px;
+        }
 
-            .character-build img {
-                width: auto; /* Убираем установленные значения width, чтобы они не перекрывали стиль */
-                max-width: 120px; /* Максимальная ширина для картинки персонажа */
-                height: auto; /* Сохраняем пропорции изображения */
-            }
+        /* Размещение иконок в одну линию с бойцом */
+        .character-build img {
+            max-width: 80px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+        }
 
-            /* Устанавливаем отступы для заголовков и изображений */
-            h1 {
-                margin-bottom: 10px;
-            }
+        /* Отступы для заголовков */
+        h1, h2, h3 {
+            text-align: left;
+            margin-bottom: 10px;
+        }
 
-            /* Новый стиль для блока с картинками на уровне Шелли */
-            .icons-row {
-                display: flex;
-                justify-content: space-between; /* Размещаем картинки с равными отступами по бокам */
-                gap: 1px; /* Уменьшаем отступы до 10px */
-                margin-top: 1px;
-                margin-bottom: 1px; /* Уменьшили нижний отступ */
-            }
+        .builds-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-            .icons-row img {
-                max-width: 100px; /* Сделали иконки немного меньше */
-                height: auto; /* Сохраняем пропорции изображения */
-                margin: 0; /* Убираем отступы */
-                padding: 0; /* Убираем лишние отступы */
-            }
+        .build-section {
+            margin-right: 20px;
+        }
 
-        </style>
+        .build-section h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Для маленьких изображений, как иконки пассивок, гаджетов и снаряжений */
+        .small-image {
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            vertical-align: middle;
+        }
+    </style>
     </head>
     <body>
 
         <!-- Блок с изображением Шелли -->
-        <div class="character-build">
-            <img src="Shelly.webp" alt="Шелли" class="medium-image">
-            <div>
-                <h1>Шелли</h1>
-                <div class="character-build">
-                    <div>
+        <h2>Шелли</h2>
+<div class="container">
+    <div class="character-build">
+        <img src="Shelly.webp" alt="Шелли">
+        <div class="builds-container">
+            <!-- Обычный билд -->
+            <div class="build-section">
                         <h2>Обычный билд</h2>
                         <img src="1.webp" alt="Контузия" class="small-image">
                         <img src="gadget1.webp" alt="Стрельба по тарелкам" class="small-image">
                         <img src="yron.webp" alt="Гирс на урон" class="small-image">
                         <img src="Dop.webp" alt="Гирс на доп гаджет" class="small-image">
                     </div>
-                    <div>
+                    <div class="build-section">
                         <h2>Билд на кустовую карту</h2>
                         <img src="1.webp" alt="Контузия" class="small-image">
                         <img src="gadget1.webp" alt="Стрельба по тарелкам" class="small-image">
@@ -93,15 +112,6 @@
             </div>
         </div>
 
-        <!-- Добавляем блок с иконками для Шелли -->
-        <div class="icons-row">
-            <img src="starting.webp" alt="Starting">
-            <img src="Rare.webp" alt="Rare">
-            <img src="superrare.webp" alt="Superrare">
-            <img src="epic.webp" alt="Epic">
-            <img src="mythic.webp" alt="Mythic">
-            <img src="Coin.webp" alt="Legendary">
-        </div>
 
         <p><a href="index.html">Вернуться на главную</a></p>
 
