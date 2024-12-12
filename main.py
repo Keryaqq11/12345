@@ -35,9 +35,13 @@ def rare():
 def Shelly():
     return render_template('Shelly.html')
 
-@app.route('/Shelly')
+@app.route('/superrare')
 def Shelly():
-    return render_template('Shelly.html')
+    return render_template('superrare.html')
+
+@app.route('/legendary')
+def Shelly():
+    return render_template('legendary.html')
 
 
 

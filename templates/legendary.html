@@ -1,0 +1,414 @@
+   <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* Сброс отступов и внутреннего поля */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Общие стили для персонажей */
+        img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        /* Выравнивание контента влево */
+        .container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        /* Стили для карточек билдов */
+        .character-build {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            width: 500px;
+        }
+
+        /* Размещение иконок в одну линию с бойцом */
+        .character-build img {
+            max-width: 80px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+        }
+
+        /* Отступы для заголовков */
+        h1, h2, h3 {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .builds-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .build-section {
+            margin-right: 20px;
+        }
+
+        .build-section h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Для маленьких изображений, как иконки пассивок, гаджетов и снаряжений */
+        .small-image {
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            vertical-align: middle;
+        }
+            </style>
+</head>
+<body>
+
+<from action="/result" method="GET">
+    <select name="brawler">
+        <option value="Мортис">Мортис</option>
+        <option value="Тара">Тара</option>
+        <option value="Джин">Поко</option>
+        <option value="Макс">Макс</option>
+        <option value="Мистер пи">Мистер пи</option>
+        <option value="Спраут">Спраут</option>
+        <option value="Байрон">Байрон</option>
+        <option value="Сквик">Сквик</option>
+        <option value="Лу">Лу</option>
+        <option value="Р-т">Р-т</option>
+        <option value="Лили">Лили</option>
+        <option value="Базз">Базз</option>
+        <option value="Бастер">Бастер</option>
+        <option value="Мелоди">Мелоди</option>
+        <option value="Мико">Мико</option>
+        <option value="Мо">Мо</option>
+        <option value="Гавс">Гавс</option>
+        <option value="Грей">Грей</option>
+        <option value="Виллоу">Виллоу</option>
+        <option value="Отис">Отис</option>
+    </select>
+    <input type="submit" value="Send">
+</from>
+
+  <h1>Спайк</h1>
+<div class="container">
+    <div class="character-build">
+        <img src="spike.webp" alt="Спайк">
+        <div class="builds-container">
+            <!-- Обычный билд -->
+            <div class="build-section">
+        <h2>Обычный билд</h2>
+            <img src="74.webp" alt="Кручёная подача" class="small-image">
+            <img src="7474.webp" alt="Кактус жизни" class="small-image">
+            <img src="spikegirs.webp" alt="Гирс на ульту" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+        </div>
+        <div class="build-section">
+            <h2>Билд на кустовую карту</h2>
+            <img src="74.webp" alt="Кручёная подача" class="small-image">
+            <img src="7474.webp" alt="Кактус жизни" class="small-image">
+            <img src="spikegirs.webp" alt="Гирс на ульту" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+        </div>
+    </div>
+</div>
+
+    <h1>Ворон</h1>
+<div class="container">
+    <div class="character-build">
+        <img src="voron.webp" alt="Ворон">
+        <div class="builds-container">
+            <!-- Обычный билд -->
+            <div class="build-section">
+        <h2>Обычный билд</h2>
+            <img src="75.webp" alt="Смертельный яд" class="small-image">
+            <img src="7575.webp" alt="Замедляющий токсин" class="small-image">
+            <img src="vorongirs.webp" alt="Гирс на яд" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+        <div class="build-section">
+            <h2>Билд на кустовую карту</h2>
+            <img src="75.webp" alt="Смертельный яд" class="small-image">
+            <img src="7575.webp" alt="Замедляющий токсин" class="small-image">
+            <img src="vorongirs.webp" alt="Гирс на яд" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+    </div>
+</div>
+
+      <h1>Леон</h1>
+<div class="container">
+    <div class="character-build">
+        <img src="leon.webp" alt="Леон">
+        <div class="builds-container">
+            <!-- Обычный билд -->
+            <div class="build-section">
+        <h2>Обычный билд</h2>
+            <img src="76.webp" alt="Тайное лекарство" class="small-image">
+            <img src="7676.webp" alt="Упавший леденец" class="small-image">
+            <img src="leongirs.webp" alt="Гирс на ульту" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+        <div class="build-section">
+            <h2>Билд на кустовую карту</h2>
+            <img src="76.webp" alt="Тайное лекарство" class="small-image">
+            <img src="7676.webp" alt="Упавший леденец" class="small-image">
+            <img src="leongirs.webp" alt="Гирс на ульту" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+    </div>
+</div>
+
+  <h1>Сенди</h1>
+<div class="container">
+    <div class="character-build">
+        <img src="sandy.webp" alt="Сенди">
+        <div class="builds-container">
+            <!-- Обычный билд -->
+            <div class="build-section">
+        <h2>Обычный билд</h2>
+            <img src="777.webp" alt="Вредный песок" class="small-image">
+            <img src="7777.webp" alt="Спокойной ночи" class="small-image">
+            <img src="sandygirs.webp" alt="Гирс на ульту" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+        <div class="build-section">
+            <h2>Билд на кустовую карту</h2>
+            <img src="77.webp" alt="Вредный песок" class="small-image">
+            <img src="7777.webp" alt="Спокойной ночи" class="small-image">
+            <img src="sandygirs.webp" alt="Гирс на ульту" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+    </div>
+</div>
+
+    <h1>Амбер</h1>
+<div class="container">
+    <div class="character-build">
+        <img src="amber.webp" alt="Амбер">
+        <div class="builds-container">
+            <!-- Обычный билд -->
+            <div class="build-section">
+        <h2>Обычный билд</h2>
+            <img src="78.webp" alt="Дикое пламя" class="small-image">
+            <img src="7878.webp" alt="Пляшущее пламя" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+        <div class="build-section">
+            <h2>Билд на кустовую карту</h2>
+            <img src="78.webp" alt="Дикое пламя" class="small-image">
+            <img src="7878.webp" alt="Пляшущее пламя" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+    </div>
+</div>
+
+      <h1>Мэг</h1>
+<div class="container">
+    <div class="character-build">
+        <img src="meg.webp" alt="Мэг">
+        <div class="builds-container">
+            <!-- Обычный билд -->
+            <div class="build-section">
+        <h2>Обычный билд</h2>
+            <img src="79.webp" alt="Тяжёлый металл" class="small-image">
+            <img src="7979.webp" alt="Источник питания" class="small-image">
+            <img src="hil.png" alt="Гирс на хил" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+        <div class="build-section">
+            <h2>Билд на кустовую карту</h2>
+            <img src="79.webp" alt="Тяжёлый металл" class="small-image">
+            <img src="7979.webp" alt="Источник питания" class="small-image">
+            <img src="hil.png" alt="Гирс на хил" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+    </div>
+</div>
+
+        <h1>Вольт</h1>
+<div class="container">
+    <div class="character-build">
+        <img src="volt.webp" alt="Вольт">
+        <div class="builds-container">
+            <!-- Обычный билд -->
+            <div class="build-section">
+        <h2>Обычный билд</h2>
+            <img src="80.webp" alt="Заморозка" class="small-image">
+            <img src="8080.webp" alt="Скачок напряжения" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+        <div class="build-section">
+            <h2>Билд на кустовую карту</h2>
+            <img src="80.webp" alt="Заморозка" class="small-image">
+            <img src="8080.webp" alt="Скачок напряжения" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+    </div>
+</div>
+
+          <h1>Честер</h1>
+<div class="container">
+    <div class="character-build">
+        <img src="chester.webp" alt="Честер">
+        <div class="builds-container">
+            <!-- Обычный билд -->
+            <div class="build-section">
+        <h2>Обычный билд</h2>
+            <img src="81.webp" alt="Царь-колокольчик" class="small-image">
+            <img src="8181.webp" alt="Шулер" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+        <div class="build-section">
+            <h2>Билд на кустовую карту</h2>
+            <img src="81.webp" alt="Царь-колокольчик" class="small-image">
+            <img src="8181.webp" alt="Шулер" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+    </div>
+</div>
+
+            <h1>Корделиус</h1>
+<div class="container">
+    <div class="character-build">
+        <img src="cordelius.webp" alt="Корделиус">
+        <div class="builds-container">
+            <!-- Обычный билд -->
+            <div class="build-section">
+        <h2>Обычный билд</h2>
+            <img src="82.webp" alt="Комбогрибы" class="small-image">
+            <img src="8282.webp" alt="Ядовитый гриб" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+        <div class="build-section">
+            <h2>Билд на кустовую карту</h2>
+            <img src="82.webp" alt="Комбогрибы" class="small-image">
+            <img src="8282.webp" alt="Ядовитый гриб" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+    </div>
+</div>
+
+            <h1>Драко</h1>
+<div class="container">
+    <div class="character-build">
+        <img src="draco.webp" alt="Драко">
+        <div class="builds-container">
+            <!-- Обычный билд -->
+            <div class="build-section">
+        <h2>Обычный билд</h2>
+            <img src="83.webp" alt="Жгучий рифф" class="small-image">
+            <img src="8383.webp" alt="Последний рубежб" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+        <div class="build-section">
+            <h2>Билд на кустовую карту</h2>
+            <img src="83.webp" alt="Жгучий рифф" class="small-image">
+            <img src="8383.webp" alt="Последний рубеж" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+    </div>
+</div>
+
+              <h1>Драко</h1>
+<div class="container">
+    <div class="character-build">
+        <img src="draco.webp" alt="Драко">
+        <div class="builds-container">
+            <!-- Обычный билд -->
+            <div class="build-section">
+        <h2>Обычный билд</h2>
+            <img src="83.webp" alt="Жгучий рифф" class="small-image">
+            <img src="8383.webp" alt="Последний рубежб" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+        <div class="build-section">
+            <h2>Билд на кустовую карту</h2>
+            <img src="83.webp" alt="Жгучий рифф" class="small-image">
+            <img src="8383.webp" alt="Последний рубеж" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+    </div>
+</div>
+
+              <h1>Кит</h1>
+<div class="container">
+    <div class="character-build">
+        <img src="cit.webp" alt="Кит">
+        <div class="builds-container">
+            <!-- Обычный билд -->
+            <div class="build-section">
+        <h2>Обычный билд</h2>
+            <img src="84.webp" alt="Нездоровая привязанность" class="small-image">
+            <img src="8484.webp" alt="Картонная коробка" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+        <div class="build-section">
+            <h2>Билд на кустовую карту</h2>
+            <img src="84.webp" alt="Нездоровая привязанность" class="small-image">
+            <img src="8484.webp" alt="Картонная коробка" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+    </div>
+</div>
+
+
+              <h1>Кендзи</h1>
+<div class="container">
+    <div class="character-build">
+        <img src="kendzi.webp" alt="Кендзи">
+        <div class="builds-container">
+            <!-- Обычный билд -->
+            <div class="build-section">
+        <h2>Обычный билд</h2>
+            <img src="85.webp" alt="Кэндзюцу" class="small-image">
+            <img src="8585.webp" alt="Лечебные Хосомаки" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+        <div class="build-section">
+            <h2>Билд на кустовую карту</h2>
+            <img src="85.webp" alt="Кэндзюцу" class="small-image">
+            <img src="8585.webp" alt="Лечебные Хосомаки" class="small-image">
+            <img src="yron.webp" alt="Гирс на урон" class="small-image">
+            <img src="dop.webp" alt="Гирс на доп гаджет" class="small-image">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
