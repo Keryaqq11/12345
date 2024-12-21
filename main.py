@@ -31,10 +31,6 @@ def index():
 def rare():
     return render_template('rare.html')
 
-@app.route('/Shelly')
-def Shelly():
-    return render_template('Shelly.html')
-
 @app.route('/superrare')
 def Shelly():
     return render_template('superrare.html')
