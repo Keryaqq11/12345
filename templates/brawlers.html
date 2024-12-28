@@ -1,24 +1,24 @@
-{{% extends "rare.html %"}}
+{% extends "rare.html" %}
 
-{{% block title %}} {title} {{% endblock %}}
+{% block title %} {{title}} {% endblock %}
 
-{{% block content %}}
-{{% for brawler in brawlers %}}
+{% block content %}
+{% for brawler in brawlers %}
     <h2>{{brawler[1]}}</h2>
     <div class="container">
         <div class="character-build">
-            <img src={{url_for('static', filename="img/"  {{images[0]}})}} alt={{brawler[1]}}>
+            <img src="{{url_for('static', filename='img/' + brawler[6])}}" alt={{brawler[1]}}>
             <div class="builds-container">
                 <!-- Обычный билд -->
                 <div class="build-section">
                     <h3>Обычный билд</h3>
-                    <img src="2.png" alt="Пассивка" class="small-image">
-                    <img src="22.webp" alt="Гаджет" class="small-image">
-                    <img src="compan.png" alt="Гирс1" class="small-image">
-                    <img src="yron.webp" alt="Гирс2" class="small-image">
+                    <img src="{{url_for('static', filename='img/' + brawler[7])}}" alt="Пассивка" class="small-image">
+                    <img src="{{url_for('static', filename='img/' + brawler[8])}}" alt="Гаджет" class="small-image">
+                    <img src="{{url_for('static', filename='img/' + brawler[9])}}" alt="Гирс1" class="small-image">
+                    <img src="{{url_for('static', filename='img/' + brawler[10])}}" alt="Гирс2" class="small-image">
                 </div>
             </div>
         </div>
     </div>
-{{% endfor %}}
-{{% endblock %}}
+{% endfor %}
+{% endblock %}

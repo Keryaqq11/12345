@@ -11,7 +11,7 @@ def index():
 def result():
     connection = sqlite3.connect("database.sqlite")
     cursor = connection.cursor()
-    cards = cursor.execute("SELECT * FROM brawlers").fetchall()
+    cards = cursor.execute("SELECT * FROM brawler").fetchall()
     connection.close()
     return render_template('brawlers.html', brawlers=cards)
 
@@ -23,20 +23,16 @@ def mythic():
 def epic():
     return render_template('epic.html')
 
-@app.route('/index')
-def index():
-    return render_template('index.html')
-
 @app.route('/rare')
 def rare():
     return render_template('rare.html')
 
 @app.route('/superrare')
-def Shelly():
+def superrare():
     return render_template('superrare.html')
 
 @app.route('/legendary')
-def Shelly():
+def legendary():
     return render_template('legendary.html')
 
 
