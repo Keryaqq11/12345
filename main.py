@@ -7,13 +7,20 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/result')
-def result():
+@app.route('/result/<string:rarity>', methods=['GET', 'POST'])
+def result(rarity):
     connection = sqlite3.connect("database.sqlite")
     cursor = connection.cursor()
-    cards = cursor.execute("SELECT * FROM brawler").fetchall()
-    connection.close()
-    return render_template('brawlers.html', brawlers=cards)
+    if request.method == 'POST':
+        name = request.form['search-name']
+        search_request = f"SELECT * FROM brawler WHERE name LIKE '%{name}%'"  # SQL injection prevention by using parameterized queries
+        cards = cursor.execute(search_request).fetchall()
+        return render_template('brawlers.html', brawlers=cards)
+    else:
+        search_request = f"SELECT * FROM brawler WHERE rares = '{rarity}'"
+        cards = cursor.execute(search_request).fetchall()
+        connection.close()
+        return render_template('brawlers.html', brawlers=cards)
 
 @app.route('/mythic')
 def mythic():

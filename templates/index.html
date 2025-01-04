@@ -65,10 +65,39 @@
             padding: 0; /* Убираем лишние отступы */
         }
 
+        /* Стили для блока поиска */
+        .search-box {
+            margin-top: 30px; /* Отступ сверху */
+            display: flex; /* Для размещения элементов в строку */
+            justify-content: center; /* Центрируем по горизонтали */
+            gap: 10px; /* Отступ между полем ввода и кнопкой */
+        }
+
+        .search-box input {
+            padding: 10px; /* Внутренние отступы для поля ввода */
+            font-size: 16px; /* Размер шрифта в поле ввода */
+            width: 200px; /* Ширина поля ввода */
+            border-radius: 5px; /* Скругленные углы */
+            border: 1px solid #ccc; /* Цвет границы */
+        }
+
+        .search-box button {
+            padding: 10px 20px; /* Внутренние отступы для кнопки */
+            font-size: 16px; /* Размер шрифта на кнопке */
+            background-color: #4CAF50; /* Зеленый фон для кнопки */
+            color: white; /* Белый цвет текста */
+            border: none; /* Без границы */
+            border-radius: 5px; /* Скругленные углы */
+            cursor: pointer; /* Курсор в виде руки при наведении */
+        }
+
+        .search-box button:hover {
+            background-color: #45a049; /* Темный оттенок при наведении */
+        }
+
     </style>
 </head>
 <body>
-
 
 <h1>Самый правильный билд на всех персонажей Brawl Stars</h1>
 
@@ -79,7 +108,7 @@
     </a>
 
     <!-- Ссылка на страницу с билдом для редких персонажей -->
-    <a href="rare.html">
+    <a href="{{url_for('result', rarity='rare')}}">
         <img src="Rare.webp" alt="Rare" class="icons-row">
     </a>
     <a href="superrare.html">
@@ -94,12 +123,16 @@
         <img src="mythic.webp" alt="Mythic" class="icons-row">
     </a>
 
-     <a href="legendary.html">
-    <img src="Coin.webp" alt="Legendary" class="icons-row">
+    <a href="legendary.html">
+        <img src="Coin.webp" alt="Legendary" class="icons-row">
+    </a>
 </div>
 
-
-
+<!-- Блок поиска -->
+<form class="search-box" method="POST" action="{{url_for('result', rarity='')}}">
+    <input type="text" id="search-name" name="search-name" placeholder="Введите имя персонажа" required>
+    <button type="submit">Поиск</button>
+</form>
 
 </body>
 </html>
