@@ -1,0 +1,8 @@
+body {
+    background-size: cover; /* Фон растягивается на весь экран */
+    background-position: center; /* Центрируем изображение */
+    background-repeat: repeat; /* Убираем повтор */
+    margin: 0; /* Убираем отступы */
+    padding: 0;
+    font-family: Arial, sans-serif; /* Выбор шрифта */
+    }
