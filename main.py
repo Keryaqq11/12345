@@ -26,6 +26,7 @@ def result(rarity):
 def mythic():
     return render_template('mythic.html')
 
+
 @app.route('/epic')
 def epic():
     return render_template('epic.html')
@@ -42,7 +43,13 @@ def superrare():
 def legendary():
     return render_template('legendary.html')
 
+@app.route('/Shelly')
+def Shelly():
+    return render_template('Shelly.html')
 
+@app.route('/brawlers')
+def brawlers():
+    return render_template('brawlers.html')
 
 
 app.run(debug=True)
