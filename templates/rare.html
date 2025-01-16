@@ -87,26 +87,11 @@
 
 
 <h1>{% block title %}{% endblock %}</h1>
-
-<from action="/result" method="GET">
-    <select name="brawler">
-        <option value="Нита">Нита</option>
-        <option value="Кольт">Кольт</option>
-        <option value="Эль примо">Эль примо</option>
-        <option value="Брок">Брок</option>
-        <option value="Булл">Булл</option>
-        <option value="Роза">Роза</option>
-        <option value="Поко">Поко</option>
-        <option value="Барли">Барли</option>
-    </select>
-    <input type="submit" value="Send">
-</from>
-
 <!-- Нита -->
 {% block content %}{% endblock %}
 
 <!-- Ссылка назад на главную страницу -->
-<a href="index.html" style="display: block; text-align: center; margin-top: 20px;">Вернуться на главную</a>
+<a href="{{url_for('index')}}" style="display: block; text-align: center; margin-top: 20px;">Вернуться на главную</a>
 
 </body>
 </html>
